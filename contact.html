@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تماس با ما | آریا بسپار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.map-wrap{border-radius:16px;overflow:hidden;border:1px solid var(--line);margin-top:28px;box-shadow:var(--sh);}
+.map-wrap iframe{display:block;width:100%;height:320px;border:0;}
+.con-form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px 32px;}
+.con-form h3{font-size:20px;font-weight:800;margin-bottom:6px;}
+.con-form p{font-size:14px;color:var(--muted);margin-bottom:22px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.form-group{display:flex;flex-direction:column;gap:7px;}
+.form-group label{font-size:13.5px;font-weight:600;color:var(--ink);}
+.form-group input,.form-group select,.form-group textarea{
+  border:1px solid var(--line);border-radius:10px;padding:11px 14px;
+  font-size:14px;font-family:'Vazirmatn',sans-serif;color:var(--ink);
+  background:#fff;outline:none;transition:border-color .2s,box-shadow .2s;width:100%;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  border-color:var(--blue);box-shadow:0 0 0 3px rgba(18,89,166,.1);
+}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-full{margin-bottom:14px;}
+.btn-submit{
+  width:100%;background:var(--green);color:#06210d;font-weight:700;
+  font-size:15px;padding:14px;border-radius:10px;border:none;cursor:pointer;
+  font-family:'Vazirmatn','Poppins',sans-serif;transition:transform .2s,box-shadow .2s;margin-top:6px;
+}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(103,189,74,.32);}
+.form-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px;}
+.info-contact{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:900px){.page-layout{grid-template-columns:1fr !important;}.info-contact{grid-template-columns:1fr;}}
+@media(max-width:600px){.form-row{grid-template-columns:1fr;}.con-form{padding:22px 16px;}}
+</style>
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon-64.png">
+</head>
+<body>
+<header id="siteHeader">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Aria Baspar" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-fa">آریا بسپار پویش پارتاک</span>
+        <span class="brand-en">Aria Baspar</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="index.html"    data-i18n="nav.home">خانه</a>
+      <a href="products.html" data-i18n="nav.products">حوزه کاری</a>
+      <a href="about.html"    data-i18n="nav.about">درباره ما</a>
+      <a href="contact.html"  data-i18n="nav.contact">تماس با ما</a>
+    </nav>
+    <div class="nav-end">
+      <button class="lang-btn" data-lang-btn aria-label="Switch Language">EN</button>
+      <a href="contact.html" class="cta-btn" data-i18n="nav.cta">مشاوره رایگان</a>
+      <button class="hamburger" id="hamBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html"    data-i18n="nav.home">خانه</a>
+    <a href="products.html" data-i18n="nav.products">حوزه کاری</a>
+    <a href="about.html"    data-i18n="nav.about">درباره ما</a>
+    <a href="contact.html"  data-i18n="nav.contact">تماس با ما</a>
+    <a href="contact.html"  style="color:#67BD4A;font-weight:700;" data-i18n="nav.cta">مشاوره رایگان</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1 data-i18n="con.hero.h1">تماس با ما</h1>
+    <p data-i18n="con.hero.p">برای استعلام قیمت، نمونه‌محصول یا مشاوره‌ی فنی آماده‌ایم</p>
+    <div class="breadcrumb">
+      <a href="index.html" data-i18n="nav.home">خانه</a><span>/</span>
+      <span data-i18n="nav.contact">تماس با ما</span>
+    </div>
+  </div>
+</section>
+
+<section class="sp">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start;" class="page-layout rv">
+
+      <!-- اطلاعات تماس + نقشه -->
+      <div>
+        <div class="sec-head">
+          <span class="kicker" data-i18n="con.kicker">ارتباط مستقیم</span>
+          <h2 data-i18n="con.h2">راه‌های ارتباطی با آریا بسپار</h2>
+          <p data-i18n="con.p">تیم کارشناسی ما در اسرع وقت پاسخگوی شما خواهد بود.</p>
+        </div>
+
+        <div class="info-contact" style="margin-top:24px;">
+          <div class="con-card">
+            <div class="con-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div><h4 data-i18n="con.c1h">آدرس کارخانه</h4><p data-i18n="con.c1p">اصفهان، شهرک صنعتی وزیرآباد، خیابان اول، پلاک ۱۹۷</p></div>
+          </div>
+          <div class="con-card">
+            <div class="con-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92Z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div>
+              <h4 data-i18n="con.c2h">تلفن تماس</h4>
+              <a href="tel:+983191001090" class="eng" style="direction:ltr;">+98 31 9100 1090</a>
+              <a href="tel:+983191001090" class="eng" style="direction:ltr;">+98 31 9100 1090</a>
+            </div>
+          </div>
+          <div class="con-card">
+            <div class="con-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M3 7l9 6.2L21 7" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <div>
+              <h4 data-i18n="con.c3h">ایمیل و وب‌سایت</h4>
+              <a href="mailto:info@aria-baspar.com" class="eng">info@aria-baspar.com</a>
+              <a href="https://www.aria-baspar.com" class="eng" target="_blank">www.aria-baspar.com</a>
+              <a href="https://www.aramelt.com" class="eng" target="_blank">www.aramelt.com</a>
+            </div>
+          </div>
+          <div class="con-card">
+            <div class="con-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg></div>
+            <div><h4 data-i18n="con.c4h">شبکه‌های اجتماعی</h4><a href="https://instagram.com/aria_baspar" target="_blank" class="eng">Instagram: aria_baspar</a></div>
+          </div>
+        </div>
+
+        <!-- نقشه گوگل -->
+        <div class="map-wrap">
+          <iframe
+  src="https://maps.google.com/maps?q=32.482011,51.647937&z=19&output=embed"
+  width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <!-- فرم -->
+      <form class="con-form rv" action="https://formspree.io/f/mpqgygzk" method="POST">
+        <h3 data-i18n="con.form.h">درخواست مشاوره یا استعلام قیمت</h3>
+        <p data-i18n="con.form.p">فرم زیر را تکمیل کنید تا کارشناسان ما تماس بگیرند.</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="con.form.name">نام و نام‌خانوادگی</label>
+            <input type="text" id="fname" name="name" placeholder="مثال: علی رضایی">
+          </div>
+          <div class="form-group">
+            <label data-i18n="con.form.company">نام شرکت</label>
+            <input type="text" id="fcompany" name="company" placeholder="نام شرکت یا کارخانه">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="con.form.phone">شماره تماس</label>
+            <input type="tel" id="fphone" name="phone" placeholder="09xxxxxxxxx" style="direction:ltr;">
+          </div>
+          <div class="form-group">
+            <label data-i18n="con.form.email">ایمیل</label>
+            <input type="email" id="femail" name="email" placeholder="email@company.com" style="direction:ltr;">
+          </div>
+        </div>
+        <div class="form-full form-group">
+          <label data-i18n="con.form.industry">حوزه صنعتی</label>
+          <select id="findustry" name="industry">
+            <option value="" disabled selected>انتخاب کنید / Select...</option>
+            <option data-fa="صحافی و کتاب‌سازی" data-en="BookBinding">صحافی و کتاب‌سازی / BookBinding</option>
+            <option data-fa="بسته‌بندی" data-en="Packaging">بسته‌بندی / Packaging</option>
+            <option data-fa="کاشی و سرامیک" data-en="Tile & Ceramic">کاشی و سرامیک / Tile & Ceramic</option>
+            <option data-fa="فیلتر هوا" data-en="Air Filter">فیلتر هوا / Air Filter</option>
+            <option data-fa="تشک و موکت" data-en="Mattress & Carpet">تشک و موکت / Mattress & Carpet</option>
+            <option data-fa="لوازم‌خانگی و مونتاژ" data-en="Home Appliances & Assembly">لوازم‌خانگی و مونتاژ / Home Appliances</option>
+            <option data-fa="سایر" data-en="Other">سایر / Other</option>
+          </select>
+        </div>
+        <div class="form-full form-group">
+          <label data-i18n="con.form.msg">توضیحات و نیاز شما</label>
+          <textarea id="fmsg" name="message" placeholder="نوع دستگاه، میزان مصرف تقریبی و هر اطلاعات کمک‌کننده‌ای..."></textarea>
+        </div>
+        <button class="btn-submit" type="submit">
+          <span data-i18n="con.form.submit">ارسال درخواست</span>
+        </button>
+        <p class="form-note" data-i18n="con.form.note">کارشناسان ما معمولاً در کمتر از ۲۴ ساعت کاری پاسخ می‌دهند.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sp-sm bg2">
+  <div class="wrap rv">
+    <div class="cta-band">
+      <div>
+        <h3 data-i18n="con.cta.h">درخواست نمونه رایگان</h3>
+        <p data-i18n="con.cta.p">برای دریافت نمونه‌ی رایگان محصولات آرامِلت جهت تست در خط تولید خود تماس بگیرید.</p>
+      </div>
+      <div class="acts">
+        <a href="tel:+983191001090" class="btn-prim eng" style="direction:ltr;">+98 31 9100 1090</a>
+        <a href="mailto:info@aria-baspar.com" class="btn-ghost" data-i18n="idx.cta.b2">ارسال ایمیل</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <img src="images/logo.png" alt="Aria Baspar" class="foot-logo">
+        <div><b>آریا بسپار پویش پارتاک</b><small>ARIA BASPAR · ARAMELT</small></div>
+      </div>
+      <div style="display:flex;gap:40px;flex-wrap:wrap;">
+        <div class="foot-col">
+          <h5 data-i18n="foot.products">محصولات</h5>
+          <a href="products.html#cat-book" data-i18n="foot.book">صحافی</a>
+          <a href="products.html#cat-pack" data-i18n="foot.pack">بسته‌بندی</a>
+          <a href="products.html#cat-tile" data-i18n="foot.tile">کاشی</a>
+          <a href="products.html#cat-air"  data-i18n="foot.air">فیلتر هوا</a>
+          <a href="products.html#cat-mat"  data-i18n="foot.mat">تشک و موکت</a>
+          <a href="products.html#cat-asm"  data-i18n="foot.asm">مونتاژ</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.company">شرکت</h5>
+          <a href="about.html"   data-i18n="foot.about">درباره ما</a>
+          <a href="contact.html" data-i18n="foot.contact">تماس با ما</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.contact">تماس</h5>
+          <a href="tel:+983191001090" class="eng" style="direction:ltr;">+98 31 9100 1090</a>
+          <a href="mailto:info@aria-baspar.com" class="eng">info@aria-baspar.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span data-i18n="foot.copy">© ۱۴۰۴ آریا بسپار. تمامی حقوق محفوظ است.</span>
+      <span data-i18n="foot.tagline" class="eng">Stick once, last forever.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function handleSubmit(){
+  const name=document.getElementById('fname').value.trim();
+  const phone=document.getElementById('fphone').value.trim();
+  if(!name||!phone){alert('لطفاً حداقل نام و شماره تماس را وارد کنید.\nPlease enter at least your name and phone number.');return;}
+  alert('درخواست شما با موفقیت ثبت شد.\nکارشناسان ما به زودی با شما تماس خواهند گرفت.\n\nThank you! Our team will contact you shortly.');
+}
+</script>
+</body>
+</html>

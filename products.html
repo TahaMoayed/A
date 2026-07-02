@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حوزه‌های کاری | آریا بسپار</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.field-hero-img {
+  width:100%; border-radius:16px; overflow:hidden;
+  box-shadow:0 20px 50px -20px rgba(10,31,56,.35);
+}
+.field-hero-img img { width:100%; aspect-ratio:16/9; object-fit:cover; }
+
+.field-block { padding:72px 0; border-top:1px solid var(--line); }
+.field-block:first-of-type { border-top:none; }
+.field-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+.field-grid.reverse { direction:ltr; }
+.field-grid.reverse > * { direction:rtl; }
+html[lang="en"] .field-grid.reverse { direction:rtl; }
+html[lang="en"] .field-grid.reverse > * { direction:ltr; }
+
+.field-img { border-radius:16px; overflow:hidden; box-shadow:var(--sh); }
+.field-img img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+
+.field-num {
+  display:inline-flex; align-items:center; gap:10px;
+  margin-bottom:16px;
+}
+.field-num .sq { width:14px; height:14px; border-radius:4px; flex-shrink:0; }
+.field-num span {
+  font-family:'Poppins',sans-serif; font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; font-weight:700;
+}
+.field-block h3 { font-size:clamp(22px,2.8vw,30px); font-weight:800; margin-bottom:14px; line-height:1.4; }
+.field-block .sub { font-size:14px; font-weight:700; margin-bottom:16px; }
+.field-block .desc { font-size:15px; color:var(--muted); line-height:1.85; margin-bottom:24px; }
+
+.feat-list { display:flex; flex-direction:column; gap:10px; }
+.feat-item {
+  display:flex; align-items:flex-start; gap:10px;
+  background:var(--paper2); border-radius:10px; padding:12px 14px;
+}
+.feat-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:6px; }
+.feat-item p { font-size:13.5px; color:var(--muted); line-height:1.65; }
+.feat-item p b { color:var(--ink); font-weight:700; }
+
+@media (max-width:900px) {
+  .field-grid { grid-template-columns:1fr; gap:28px; }
+  .field-grid.reverse { direction:rtl; }
+  .field-img { display:none; }
+}
+</style>
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon-64.png">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="siteHeader">
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="images/logo.png" alt="Aria Baspar" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-fa">آریا بسپار پویش پارتاک</span>
+        <span class="brand-en">Aria Baspar</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="index.html"    data-i18n="nav.home">خانه</a>
+      <a href="products.html" data-i18n="nav.products">حوزه کاری</a>
+      <a href="about.html"    data-i18n="nav.about">درباره ما</a>
+      <a href="contact.html"  data-i18n="nav.contact">تماس با ما</a>
+    </nav>
+    <div class="nav-end">
+      <button class="lang-btn" data-lang-btn aria-label="Switch Language">EN</button>
+      <a href="contact.html" class="cta-btn" data-i18n="nav.cta">مشاوره رایگان</a>
+      <button class="hamburger" id="hamBtn" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html"    data-i18n="nav.home">خانه</a>
+    <a href="products.html" data-i18n="nav.products">حوزه کاری</a>
+    <a href="about.html"    data-i18n="nav.about">درباره ما</a>
+    <a href="contact.html"  data-i18n="nav.contact">تماس با ما</a>
+    <a href="contact.html"  style="color:#67BD4A;font-weight:700;" data-i18n="nav.cta">مشاوره رایگان</a>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1 data-i18n="pr.hero.h1">حوزه‌های کاری آرامِلت</h1>
+    <p data-i18n="pr.hero.p">راهکارهای تخصصی چسب گرماذوب برای ۶ صنعت اصلی</p>
+    <div class="breadcrumb">
+      <a href="index.html" data-i18n="nav.home">خانه</a>
+      <span>/</span>
+      <span data-i18n="nav.products">حوزه کاری</span>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="prod-nav" aria-label="دسته‌بندی">
+  <div class="prod-nav-inner">
+    <a href="#f-book"><span class="dot" style="background:var(--c-book)"></span><span data-i18n="foot.book">صحافی</span></a>
+    <a href="#f-pack"><span class="dot" style="background:var(--c-pack)"></span><span data-i18n="foot.pack">بسته‌بندی</span></a>
+    <a href="#f-tile"><span class="dot" style="background:var(--c-tile)"></span><span data-i18n="foot.tile">کاشی</span></a>
+    <a href="#f-air" ><span class="dot" style="background:var(--c-air)"></span><span data-i18n="foot.air">فیلتر هوا</span></a>
+    <a href="#f-mat" ><span class="dot" style="background:var(--c-mat)"></span><span data-i18n="foot.mat">تشک و موکت</span></a>
+    <a href="#f-asm" ><span class="dot" style="background:var(--c-asm)"></span><span data-i18n="foot.asm">مونتاژ</span></a>
+  </div>
+</nav>
+
+<!-- ══ 01 BOOKBINDING ══ -->
+<div class="field-block" id="f-book">
+  <div class="wrap">
+    <div class="field-grid rv">
+      <div>
+        <div class="field-num">
+          <span class="sq" style="background:var(--c-book)"></span>
+          <span style="color:var(--c-book)" data-i18n="pr.book.tag">۰۱ — صحافی</span>
+        </div>
+        <h3 data-i18n="pr.book.h">چسب‌های گرماذوب صحافی</h3>
+        <p class="desc" data-i18n="pr.book.desc">از اولین تا آخرین صفحه؛ چسب‌های آرامِلت عملکرد عالی در پشت‌بندی، کناربندی و ته‌بندی ارائه می‌دهند. استحکام کشش صفحه برتر و برش ستون کتاب تنها ۲۰ ثانیه پس از صحافی.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-book)"></span>
+            <p data-i18n="pr.book.f1"><b>پشت‌بندی و ته‌بندی</b> — چسبندگی عالی روی انواع کاغذ برای صحافی اتوماتیک و دستی</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-book)"></span>
+            <p data-i18n="pr.book.f2"><b>کناربندی ویژه</b> — زمان باز طولانی برای عملیات کناربندی با ماشین‌های پرسرعت</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-book)"></span>
+            <p data-i18n="pr.book.f3"><b>انعطاف کامل</b> — مقاومت در برابر شکستگی در دمای پایین، مناسب صحافی کتاب‌های مرجع</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-book)"></span>
+            <p data-i18n="pr.book.f4"><b>زمان سخت‌شدن سریع</b> — برش ستون فقط ۲۰ ثانیه پس از صحافی برای افزایش سرعت خط تولید</p>
+          </div>
+        </div>
+      </div>
+      <div class="field-img">
+        <img src="images/bookbinding.jpg" alt="BookBinding" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 02 PACKAGING ══ -->
+<div class="field-block bg2" id="f-pack">
+  <div class="wrap">
+    <div class="field-grid reverse rv">
+      <div class="field-img">
+        <img src="images/packaging.jpg" alt="Packaging" loading="lazy">
+      </div>
+      <div>
+        <div class="field-num">
+          <span class="sq" style="background:var(--c-pack)"></span>
+          <span style="color:var(--c-pack)" data-i18n="pr.pack.tag">۰۲ — بسته‌بندی</span>
+        </div>
+        <h3 data-i18n="pr.pack.h">چسب‌های بسته‌بندی و نی‌چسبانی</h3>
+        <p class="desc" data-i18n="pr.pack.desc">هزاران تولیدکننده در صنایع غذایی، نوشیدنی، کاشی و دارویی برای بهبود خط تولید خود به آرامِلت تکیه می‌کنند. مقاومت تا منفی ۴۰ درجه و اتصال قوی به سطوح کوتد.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-pack)"></span>
+            <p data-i18n="pr.pack.f1"><b>بسته‌بندی کارتن خودکار</b> — سرعت بالا، زمان سخت‌شدن سریع، مناسب ماشین‌های بسته‌بندی اتوماتیک</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-pack)"></span>
+            <p data-i18n="pr.pack.f2"><b>تماس با مواد غذایی</b> — مقاوم در انجماد عمیق تا منفی ۴۰ درجه، تأییدیه تماس با غذا</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-pack)"></span>
+            <p data-i18n="pr.pack.f3"><b>نی‌چسبانی</b> — چسبندگی عالی به PE، PP و سطوح متالیزه برای اتصال نی روی پاکت‌های نوشیدنی</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-pack)"></span>
+            <p data-i18n="pr.pack.f4"><b>دوخت حرارتی و صابون‌پیچی</b> — ویسکوزیته پایین، بدون بو، مناسب بسته‌بندی محصولات بهداشتی</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 03 TILE ══ -->
+<div class="field-block" id="f-tile">
+  <div class="wrap">
+    <div class="field-grid rv">
+      <div>
+        <div class="field-num">
+          <span class="sq" style="background:var(--c-tile)"></span>
+          <span style="color:var(--c-tile)" data-i18n="pr.tile.tag">۰۳ — کاشی</span>
+        </div>
+        <h3 data-i18n="pr.tile.h">چسب‌های بسته‌بندی کاشی</h3>
+        <p class="desc" data-i18n="pr.tile.desc">گریدهای آرامِلت برای جداسازی کاشی‌های کف‌پوش، پرسلان و سرامیک و تولید چسب سنگین برای جعبه‌های کاشی؛ جداشدن بدون لکه از سطوح گران‌قیمت.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-tile)"></span>
+            <p data-i18n="pr.tile.f1"><b>جداکننده کاشی</b> — جداسازی ایمن کاشی‌های سنگین در حمل‌ونقل بدون آسیب به سطح</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-tile)"></span>
+            <p data-i18n="pr.tile.f2"><b>بسته‌بندی کارتن کاشی</b> — استحکام بالا برای نگهداری کاشی‌های سنگین در جعبه</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-tile)"></span>
+            <p data-i18n="pr.tile.f3"><b>بدون لکه</b> — جداشدن کامل از سطوح براق و صاف بدون باقی‌گذاشتن هیچ اثری</p>
+          </div>
+        </div>
+      </div>
+      <div class="field-img">
+        <img src="images/tile.jpg" alt="Tile" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 04 AIR FILTER ══ -->
+<div class="field-block bg2" id="f-air">
+  <div class="wrap">
+    <div class="field-grid reverse rv">
+      <div class="field-img">
+        <img src="images/airfilter.jpg" alt="Air Filter" loading="lazy">
+      </div>
+      <div>
+        <div class="field-num">
+          <span class="sq" style="background:var(--c-air)"></span>
+          <span style="color:var(--c-air)" data-i18n="pr.air.tag">۰۴ — فیلتر هوا</span>
+        </div>
+        <h3 data-i18n="pr.air.h">چسب‌های فیلتر هوا</h3>
+        <p class="desc" data-i18n="pr.air.desc">طیف جامع و اثبات‌شده برای صنایع تجاری، پزشکی، خودرویی و خانگی. غیرسایشی، کم‌کربن و بدون دردسر — کاهش هزینه‌های نگهداری و افزایش بهره‌وری.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-air)"></span>
+            <p data-i18n="pr.air.f1"><b>فیلتر خودرو</b> — نقطه نرمی بالا، مقاوم در دماهای موتور، شفاف و بدون رنگ</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-air)"></span>
+            <p data-i18n="pr.air.f2"><b>فیلتر صنعتی و پزشکی</b> — چسبندگی عالی به رسانه‌های فیلتر، انعطاف لازم برای پلیسه‌های فیلتر</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-air)"></span>
+            <p data-i18n="pr.air.f3"><b>پد سلولزی</b> — مخصوص فیلترهای تبخیری و هواکش‌های صنعتی و خانگی</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 05 MATTRESS ══ -->
+<div class="field-block" id="f-mat">
+  <div class="wrap">
+    <div class="field-grid rv">
+      <div>
+        <div class="field-num">
+          <span class="sq" style="background:var(--c-mat)"></span>
+          <span style="color:var(--c-mat)" data-i18n="pr.mat.tag">۰۵ — تشک و موکت</span>
+        </div>
+        <h3 data-i18n="pr.mat.h">چسب‌های تشک و موکت</h3>
+        <p class="desc" data-i18n="pr.mat.desc">مناسب اسمبل دستی و اتوماتیک برای انواع تشک شامل فنر باز، فنر پاکتی و فوم. غیرسمی، بدون دود و تقریباً بدون بو برای اتصال فوم و پارچه.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-mat)"></span>
+            <p data-i18n="pr.mat.f1"><b>فنر پاکتی</b> — چسبندگی فوم به پاکت فنر با انعطاف عالی، زمان سخت‌شدن تنظیم‌پذیر</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-mat)"></span>
+            <p data-i18n="pr.mat.f2"><b>لبه‌بندی موکت</b> — استحکام کامل در لبه‌های موکت، رنگ شفاف، نقطه نرمی بالا</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-mat)"></span>
+            <p data-i18n="pr.mat.f3"><b>برچسب اتو پارچه‌ای</b> — ویژه تولید لیبل ابریشمی برای تشک و موکت با استحکام اتصال عالی</p>
+          </div>
+        </div>
+      </div>
+      <div class="field-img">
+        <img src="images/mattress.jpg" alt="Mattress Carpet" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 06 ASSEMBLY ══ -->
+<div class="field-block bg2" id="f-asm">
+  <div class="wrap">
+    <div class="field-grid reverse rv">
+      <div class="field-img">
+        <img src="images/assembly.jpg" alt="Assembly" loading="lazy">
+      </div>
+      <div>
+        <div class="field-num">
+          <span class="sq" style="background:var(--c-asm)"></span>
+          <span style="color:var(--c-asm)" data-i18n="pr.asm.tag">۰۶ — مونتاژ</span>
+        </div>
+        <h3 data-i18n="pr.asm.h">چسب‌های مونتاژ محصولات</h3>
+        <p class="desc" data-i18n="pr.asm.desc">چسب تمیز، کم‌حجم و بادوام برای ساخت لوازم‌خانگی: ماشین لباسشویی، ظرفشویی، یخچال و فریزر. گرید ویژه برای آب‌بندی کابینت یخچال پیش از تزریق فوم عایق.</p>
+        <div class="feat-list">
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-asm)"></span>
+            <p data-i18n="pr.asm.f1"><b>مونتاژ یخچال</b> — آب‌بندی کابینت قبل از تزریق فوم عایق، چسبندگی عالی به ABS</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-asm)"></span>
+            <p data-i18n="pr.asm.f2"><b>لوازم خانگی</b> — مناسب ماشین لباسشویی، ظرفشویی و فیلتر جاروبرقی، عملکرد پایدار</p>
+          </div>
+          <div class="feat-item">
+            <span class="feat-dot" style="background:var(--c-asm)"></span>
+            <p data-i18n="pr.asm.f3"><b>موکت خودرو</b> — نقطه نرمی بسیار بالا، مقاوم در برابر حرارت داخل خودرو</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="sp-sm">
+  <div class="wrap rv">
+    <div class="cta-band">
+      <div>
+        <h3 data-i18n="idx.cta.h">برای انتخاب راهکار مناسب مشاوره بگیرید</h3>
+        <p data-i18n="idx.cta.p">کارشناسان آریا بسپار، راهکار بهینه را متناسب با ماشین‌آلات و نیاز شما پیشنهاد می‌دهند.</p>
+      </div>
+      <div class="acts">
+        <a href="tel:+983191001090" class="btn-prim eng" style="direction:ltr;">+98 31 9100 1090</a>
+        <a href="mailto:info@aria-baspar.com" class="btn-ghost" data-i18n="idx.cta.b2">ارسال ایمیل</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <img src="images/logo.png" alt="Aria Baspar" class="foot-logo">
+        <div>
+          <b>آریا بسپار پویش پارتاک</b>
+          <small>ARIA BASPAR · ARAMELT</small>
+        </div>
+      </div>
+      <div style="display:flex;gap:40px;flex-wrap:wrap;">
+        <div class="foot-col">
+          <h5 data-i18n="foot.products">حوزه‌های کاری</h5>
+          <a href="#f-book" data-i18n="foot.book">صحافی</a>
+          <a href="#f-pack" data-i18n="foot.pack">بسته‌بندی</a>
+          <a href="#f-tile" data-i18n="foot.tile">کاشی</a>
+          <a href="#f-air"  data-i18n="foot.air">فیلتر هوا</a>
+          <a href="#f-mat"  data-i18n="foot.mat">تشک و موکت</a>
+          <a href="#f-asm"  data-i18n="foot.asm">مونتاژ</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.company">شرکت</h5>
+          <a href="about.html"   data-i18n="foot.about">درباره ما</a>
+          <a href="contact.html" data-i18n="foot.contact">تماس با ما</a>
+        </div>
+        <div class="foot-col">
+          <h5 data-i18n="foot.contact">تماس</h5>
+          <a href="tel:+983191001090" class="eng" style="direction:ltr;">+98 31 9100 1090</a>
+          <a href="mailto:info@aria-baspar.com" class="eng">info@aria-baspar.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span data-i18n="foot.copy">© ۱۴۰۴ آریا بسپار. تمامی حقوق محفوظ است.</span>
+      <span data-i18n="foot.tagline" class="eng">Stick once, last forever.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  const fields = ['f-book','f-pack','f-tile','f-air','f-mat','f-asm'];
+  const navLinks = document.querySelectorAll('.prod-nav a');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.prod-nav a[href="#${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin:'-30% 0px -60% 0px' });
+  fields.forEach(id => { const el = document.getElementById(id); if(el) io.observe(el); });
+</script>
+</body>
+</html>
